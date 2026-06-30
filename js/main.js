@@ -5,7 +5,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initSmoothScroll();
-  initContactForm();
   initNavbarScroll();
 });
 
@@ -26,7 +25,7 @@ function initNavbarScroll() {
 // Scroll-triggered fade-in animations
 function initScrollEffects() {
   const fadeElements = document.querySelectorAll(
-    '.service-card, .process-card, .portfolio-card, .testimonial-card, .tech-stack'
+    '.app-card, .contact-card, .tech-stack'
   );
 
   // Add fade-in class to elements
@@ -94,49 +93,6 @@ function initActiveNavHighlight() {
         link.classList.add('active');
       }
     });
-  });
-}
-
-// Contact form handling
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Basic form data collection
-    const formData = {
-      firstName: document.getElementById('firstName')?.value || '',
-      lastName: document.getElementById('lastName')?.value || '',
-      email: document.getElementById('email')?.value || '',
-      platform: document.getElementById('platform')?.value || '',
-      message: document.getElementById('message')?.value || '',
-    };
-
-    // Show success message (in production, send to backend)
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
-    submitBtn.disabled = true;
-
-    // Simulate form submission
-    setTimeout(() => {
-      submitBtn.innerHTML = '<i class="bi bi-check-lg me-2"></i>Message Sent!';
-      submitBtn.classList.remove('btn-primary');
-      submitBtn.classList.add('btn-success');
-
-      console.log('Contact form submitted:', formData);
-
-      // Reset form
-      setTimeout(() => {
-        form.reset();
-        submitBtn.innerHTML = originalText;
-        submitBtn.classList.remove('btn-success');
-        submitBtn.classList.add('btn-primary');
-        submitBtn.disabled = false;
-      }, 2500);
-    }, 1200);
   });
 }
 

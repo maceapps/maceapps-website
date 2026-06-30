@@ -176,69 +176,29 @@ body {
   }
 }
 
-/* ========== Service Cards ========== */
-.service-card {
+/* ========== App Cards ========== */
+.app-card {
   border-radius: 20px;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.service-card:hover {
+.app-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1) !important;
 }
 
-.service-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.app-img {
+  height: 200px;
 }
 
-/* ========== Process ========== */
-.process-card {
-  transition: all 0.3s ease;
-  border-radius: 16px;
-}
-
-.process-card:hover {
-  transform: translateY(-4px);
-  background: var(--mace-light);
-}
-
-.process-number {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--mace-gradient);
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.3);
-}
-
-/* ========== Portfolio ========== */
-.portfolio-card {
+/* ========== Contact Cards ========== */
+.contact-card {
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
-.portfolio-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12) !important;
-}
-
-/* ========== Testimonials ========== */
-.testimonial-card {
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.testimonial-card:hover {
+.contact-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1) !important;
 }
@@ -303,26 +263,12 @@ body {
 }
 
 /* ========== Responsive ========== */
-@media (max-width: 991px) {
-  .hero-image-wrapper {
-    display: none;
-  }
-
-  .hero-section {
-    text-align: center;
-    min-height: auto;
-    padding-bottom: 80px;
-  }
-
-  .hero-section .d-flex.flex-wrap {
-    justify-content: center;
-  }
-
-  .hero-section .d-flex.align-items-center.gap-3.mt-4 {
-    justify-content: center;
-  }
-
-  .display-3 {
+@media (m64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0
     font-size: 2.5rem;
   }
 
