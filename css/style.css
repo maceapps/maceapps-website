@@ -94,6 +94,12 @@ body {
   overflow: hidden;
 }
 
+.hero-logo {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
 .text-gradient {
   background: var(--mace-gradient-text);
   -webkit-background-clip: text;
