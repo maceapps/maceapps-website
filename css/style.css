@@ -39,14 +39,12 @@ body {
   padding: 10px 0;
 }
 
-.navbar-brand {
-  font-size: 1.6rem;
-  color: var(--mace-primary) !important;
-  letter-spacing: -0.5px;
+.navbar-brand img {
+  transition: all 0.3s ease;
 }
 
-.navbar-brand i {
-  font-size: 1.4rem;
+.navbar-brand img:hover {
+  opacity: 0.85;
 }
 
 .nav-link {
