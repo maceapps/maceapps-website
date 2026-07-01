@@ -16,17 +16,19 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <div class="grain-overlay" aria-hidden="true"></div>
+
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/app image transparent.png" alt="MACE Applications" height="40">
+        <img src="assets/app image.png" alt="MACE Applications" height="36">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -52,17 +54,21 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero-section d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
+    <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
         <div class="col-lg-6 text-center text-lg-start">
-          <img src="assets/Transparent logo with text for Mace Applications.png" alt="MACE Applications" class="hero-logo mb-4">
+          <img src="assets/mace-logo.png" alt="MACE Applications" class="hero-brand-logo d-block mx-auto mx-lg-0 mb-4">
+          <span class="hero-kicker">iOS &middot; Android &middot; App Development</span>
+          <h1 class="hero-title">Mobile apps people <span class="text-gradient">actually enjoy</span> using.</h1>
           <p class="lead text-muted mb-4">
-            A mobile application development company creating innovative, high-quality
-            apps for iOS and Android.
+            MACE Applications is a mobile app development company crafting innovative,
+            high-quality experiences for iOS and Android — from first sketch to App Store launch.
           </p>
-          <div class="d-flex flex-wrap gap-3">
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
             <a href="#apps" class="btn btn-primary btn-lg px-4">
-              View Our Apps <i class="bi bi-arrow-right ms-2"></i>
+              What We're Building <i class="bi bi-arrow-right ms-2"></i>
             </a>
             <a href="#about" class="btn btn-outline-secondary btn-lg px-4">
               About Us
@@ -72,75 +78,46 @@
         <div class="col-lg-6 text-center">
           <div class="hero-image-wrapper">
             <div class="floating-phone phone-left">
-              <div class="phone-screen"></div>
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="phone-ui-bar"></div>
+                <div class="phone-ui-card"></div>
+                <div class="phone-ui-card phone-ui-card-sm"></div>
+              </div>
             </div>
             <div class="floating-phone phone-right">
-              <div class="phone-screen"></div>
+              <div class="phone-notch"></div>
+              <div class="phone-screen phone-screen-alt">
+                <div class="phone-ui-bar"></div>
+                <div class="phone-ui-card"></div>
+                <div class="phone-ui-card phone-ui-card-sm"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <a href="#apps" class="scroll-cue" aria-label="Scroll to next section">
+      <i class="bi bi-chevron-down"></i>
+    </a>
     <div class="hero-shape"></div>
   </section>
 
   <!-- Our Apps Section -->
   <section id="apps" class="section-padding bg-light">
     <div class="container">
-      <div class="row text-center mb-5">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="display-5 fw-bold mb-3">Our Apps</h2>
-          <p class="lead text-muted">Applications we've built and published.</p>
+      <div class="coming-soon-card spotlight">
+        <div class="coming-soon-icon">
+          <img src="assets/Transparent icon-only mace logo for Mace Applications.png" alt="MACE Applications icon">
         </div>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="app-card card border-0 shadow-sm h-100">
-            <div class="app-img bg-primary-subtle d-flex align-items-center justify-content-center">
-              <i class="bi bi-box-seam display-1 text-primary opacity-50"></i>
-            </div>
-            <div class="card-body p-4">
-              <span class="badge bg-primary-subtle text-primary mb-2">iOS</span>
-              <h5 class="card-title fw-bold">App Name</h5>
-              <p class="card-text text-muted small">A brief description of this application and what it does for users.</p>
-              <a href="#" class="btn btn-sm btn-outline-primary mt-2">
-                <i class="bi bi-apple me-1"></i> App Store
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="app-card card border-0 shadow-sm h-100">
-            <div class="app-img bg-success-subtle d-flex align-items-center justify-content-center">
-              <i class="bi bi-grid-3x3-gap display-1 text-success opacity-50"></i>
-            </div>
-            <div class="card-body p-4">
-              <span class="badge bg-success-subtle text-success mb-2">iOS & Android</span>
-              <h5 class="card-title fw-bold">App Name</h5>
-              <p class="card-text text-muted small">A brief description of this application and what it does for users.</p>
-              <a href="#" class="btn btn-sm btn-outline-primary mt-2">
-                <i class="bi bi-apple me-1"></i> App Store
-              </a>
-              <a href="#" class="btn btn-sm btn-outline-success mt-2 ms-1">
-                <i class="bi bi-google-play me-1"></i> Google Play
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="app-card card border-0 shadow-sm h-100">
-            <div class="app-img bg-warning-subtle d-flex align-items-center justify-content-center">
-              <i class="bi bi-stars display-1 text-warning opacity-50"></i>
-            </div>
-            <div class="card-body p-4">
-              <span class="badge bg-warning-subtle text-warning mb-2">iOS</span>
-              <h5 class="card-title fw-bold">App Name</h5>
-              <p class="card-text text-muted small">A brief description of this application and what it does for users.</p>
-              <a href="#" class="btn btn-sm btn-outline-primary mt-2">
-                <i class="bi bi-apple me-1"></i> App Store
-              </a>
-            </div>
-          </div>
+        <div class="coming-soon-body">
+          <span class="coming-soon-badge"><i class="bi bi-hourglass-split me-2"></i>In Development</span>
+          <h2 class="fw-bold mb-3">Our first app is in the works</h2>
+          <p class="text-muted mb-0">
+            We're heads-down building our debut app for iOS and Android. We're taking the time
+            to get the details right before it ever reaches an App Store — check back soon,
+            or reach out below if you'd like to hear more.
+          </p>
         </div>
       </div>
     </div>
@@ -149,60 +126,52 @@
   <!-- About Section -->
   <section id="about" class="section-padding">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h2 class="display-5 fw-bold mb-4">About MACE Applications</h2>
-          <p class="lead text-muted mb-4">
+      <div class="row mb-5">
+        <div class="col-lg-8">
+          <h2 class="display-5 fw-bold mb-3">About MACE Applications</h2>
+          <p class="lead text-muted mb-0">
             We are a mobile application development company focused on creating
             high-quality, user-friendly apps for iOS and Android platforms.
           </p>
-          <p class="text-muted mb-4">
+        </div>
+      </div>
+      <div class="about-bento">
+        <div class="bento-item bento-main spotlight">
+          <p class="text-muted mb-0">
             Based in Australia, our team is passionate about building elegant,
             performant mobile experiences. We handle everything from concept and
             design through to development, testing, and App Store deployment.
           </p>
-          <div class="row g-4 mt-3">
-            <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <div class="stat-icon bg-primary-subtle text-primary rounded-circle p-2">
-                  <i class="bi bi-phone fs-5"></i>
-                </div>
-                <div>
-                  <h3 class="fw-bold mb-0">iOS</h3>
-                  <p class="text-muted mb-0 small">Swift & SwiftUI</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="d-flex align-items-center gap-2">
-                <div class="stat-icon bg-success-subtle text-success rounded-circle p-2">
-                  <i class="bi bi-android2 fs-5"></i>
-                </div>
-                <div>
-                  <h3 class="fw-bold mb-0">Android</h3>
-                  <p class="text-muted mb-0 small">Kotlin & Jetpack Compose</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="col-lg-6">
-          <div class="tech-stack p-4 bg-light rounded-4">
-            <h5 class="fw-bold mb-3">Technologies</h5>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-white text-dark border px-3 py-2">Swift</span>
-              <span class="badge bg-white text-dark border px-3 py-2">SwiftUI</span>
-              <span class="badge bg-white text-dark border px-3 py-2">Kotlin</span>
-              <span class="badge bg-white text-dark border px-3 py-2">Jetpack Compose</span>
-              <span class="badge bg-white text-dark border px-3 py-2">React Native</span>
-              <span class="badge bg-white text-dark border px-3 py-2">Flutter</span>
-              <span class="badge bg-white text-dark border px-3 py-2">Firebase</span>
-              <span class="badge bg-white text-dark border px-3 py-2">Core Data</span>
-              <span class="badge bg-white text-dark border px-3 py-2">ARKit</span>
-              <span class="badge bg-white text-dark border px-3 py-2">CloudKit</span>
-              <span class="badge bg-white text-dark border px-3 py-2">Push Notifications</span>
-              <span class="badge bg-white text-dark border px-3 py-2">In-App Purchase</span>
-            </div>
+        <div class="bento-item bento-ios spotlight">
+          <div class="stat-icon bg-primary-subtle text-primary rounded-circle p-2 mb-3">
+            <i class="bi bi-phone fs-5"></i>
+          </div>
+          <h3 class="fw-bold mb-0">iOS</h3>
+          <p class="text-muted mb-0 small">Swift &amp; SwiftUI</p>
+        </div>
+        <div class="bento-item bento-android spotlight">
+          <div class="stat-icon bg-success-subtle text-success rounded-circle p-2 mb-3">
+            <i class="bi bi-android2 fs-5"></i>
+          </div>
+          <h3 class="fw-bold mb-0">Android</h3>
+          <p class="text-muted mb-0 small">Kotlin &amp; Jetpack Compose</p>
+        </div>
+        <div class="bento-item bento-tech spotlight">
+          <h5 class="fw-bold mb-3">Technologies</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-white text-dark border px-3 py-2">Swift</span>
+            <span class="badge bg-white text-dark border px-3 py-2">SwiftUI</span>
+            <span class="badge bg-white text-dark border px-3 py-2">Kotlin</span>
+            <span class="badge bg-white text-dark border px-3 py-2">Jetpack Compose</span>
+            <span class="badge bg-white text-dark border px-3 py-2">React Native</span>
+            <span class="badge bg-white text-dark border px-3 py-2">Flutter</span>
+            <span class="badge bg-white text-dark border px-3 py-2">Firebase</span>
+            <span class="badge bg-white text-dark border px-3 py-2">Core Data</span>
+            <span class="badge bg-white text-dark border px-3 py-2">ARKit</span>
+            <span class="badge bg-white text-dark border px-3 py-2">CloudKit</span>
+            <span class="badge bg-white text-dark border px-3 py-2">Push Notifications</span>
+            <span class="badge bg-white text-dark border px-3 py-2">In-App Purchase</span>
           </div>
         </div>
       </div>
@@ -222,16 +191,16 @@
         <div class="col-lg-8">
           <div class="row g-4">
             <div class="col-md-6">
-              <div class="contact-card card border-0 shadow-sm h-100 p-4 text-center">
+              <a href="mailto:contact@maceapps.com.au" class="contact-card spotlight d-block text-center text-decoration-none h-100">
                 <div class="contact-icon bg-primary-subtle text-primary rounded-circle p-3 mx-auto mb-3">
                   <i class="bi bi-envelope fs-4"></i>
                 </div>
                 <h5 class="fw-bold">Email</h5>
                 <p class="text-muted mb-0">contact@maceapps.com.au</p>
-              </div>
+              </a>
             </div>
             <div class="col-md-6">
-              <div class="contact-card card border-0 shadow-sm h-100 p-4 text-center">
+              <div class="contact-card spotlight text-center h-100">
                 <div class="contact-icon bg-primary-subtle text-primary rounded-circle p-3 mx-auto mb-3">
                   <i class="bi bi-geo-alt fs-4"></i>
                 </div>

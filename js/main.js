@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initSmoothScroll();
   initNavbarScroll();
+  initSpotlight();
 });
 
 // Scroll-based navigation styling
@@ -25,11 +26,20 @@ function initNavbarScroll() {
 // Scroll-triggered fade-in animations
 function initScrollEffects() {
   const fadeElements = document.querySelectorAll(
-    '.app-card, .contact-card, .tech-stack'
+    '.bento-item, .contact-card, .coming-soon-card'
   );
 
-  // Add fade-in class to elements
-  fadeElements.forEach(el => el.classList.add('fade-in'));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  fadeElements.forEach((el, i) => {
+    el.classList.add('fade-in');
+    el.style.setProperty('--fade-delay', `${Math.min(i * 80, 240)}ms`);
+  });
+
+  if (reduceMotion) {
+    fadeElements.forEach(el => el.classList.add('visible'));
+    return;
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -43,6 +53,19 @@ function initScrollEffects() {
   );
 
   fadeElements.forEach(el => observer.observe(el));
+}
+
+// Cursor-tracking spotlight highlight on cards
+function initSpotlight() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  document.querySelectorAll('.spotlight').forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      el.style.setProperty('--my', `${e.clientY - rect.top}px`);
+    });
+  });
 }
 
 // Smooth scrolling for anchor links
