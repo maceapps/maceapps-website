@@ -1224,8 +1224,16 @@ body.cursor-active .cursor-glow {
 @media (max-width: 1024px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 64px;
+    gap: 40px;
     text-align: center;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .mace-stage {
+    width: min(300px, 64vw);
   }
 
   .hero-sub {
@@ -1347,7 +1355,7 @@ body.cursor-active .cursor-glow {
   }
 
   .mace-stage {
-    width: min(300px, 78vw);
+    width: min(240px, 64vw);
   }
 
   .hero-meta {
