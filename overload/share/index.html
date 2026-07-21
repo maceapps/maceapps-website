@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Someone shared an Overload workout with you. Open it in the Overload app.">
+  <meta name="theme-color" content="#05070f">
+  <meta name="robots" content="noindex">
+
+  <title>Shared Workout — Overload</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --bg: #05070f; --fg: #f5f6fa; --muted: #9aa1b4; --accent: #ff8a1f; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      padding: 24px; background: var(--bg); color: var(--fg);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-align: center;
+    }
+    .card { max-width: 420px; width: 100%; }
+    .logo { width: 72px; height: 72px; object-fit: contain; margin-bottom: 24px; }
+    h1 { font-family: "Space Grotesk", Inter, sans-serif; font-size: 1.6rem; margin: 0 0 12px; }
+    p { color: var(--muted); line-height: 1.6; margin: 0 0 28px; }
+    .btn {
+      display: inline-block; padding: 14px 28px; border-radius: 999px;
+      background: var(--accent); color: #1a1004; font-weight: 600; text-decoration: none;
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .hint { margin-top: 28px; font-size: 0.85rem; color: var(--muted); }
+    .hint a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img src="/assets/mace-logo.png" alt="" class="logo">
+    <h1>Someone shared a workout with you</h1>
+    <p>
+      Open this link on an iPhone with Overload installed and the workout will load
+      straight into your library. If nothing happened, you don't have the app yet.
+    </p>
+    <!-- TODO: replace with the real App Store URL once the app is live. -->
+    <a class="btn" href="https://apps.apple.com/app/overload/idAPP_ID">Get Overload</a>
+    <p class="hint">
+      Already installed? Reopen the link from Messages or Mail rather than pasting it
+      into the address bar — typed URLs bypass app links.
+      <br><br>
+      <a href="https://www.maceapps.com.au">MACE Applications</a>
+    </p>
+  </main>
+</body>
+</html>

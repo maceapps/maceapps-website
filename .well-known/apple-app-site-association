@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["9SQUWJ6SQA.au.com.maceapps.overload"],
+        "components": [
+          { "/": "/overload/share*", "comment": "Overload workout share links" }
+        ]
+      }
+    ]
+  }
+}
